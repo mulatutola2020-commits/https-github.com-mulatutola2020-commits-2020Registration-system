@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        /* Mobile App Design Basics */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* App Container Card */
+        .app-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .app-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .app-header h2 {
+            margin: 0;
+            color: #333;
+            font-size: 22px;
+        }
+
+        /* Form Elements */
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #555;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+        }
+
+        /* Action Buttons */
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color:#333333
+        }
+
+        button[type="reset"] {
+            background-color: #5a2a81;
+            color: #333;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #d8dadf;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="app-header">
+        <h2>Filling Personal Data</h2>
+    </div>
+
+    <form action="https://formspree.io/f/xgaoyajv" method="POST">
+        <div class="input-group">
+            <label for="name">Maqaa (Name) :</label>
+            <input type="text" id="name" name="name" placeholder="enter your name here">
+        </div>
+
+        <div class="input-group">
+            <label for="email"> email(your Email) :</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+        <div class="input-group">
+            <label for="Sex">sex :</label>
+            <input type="text" id="Sex" name="Sex" placeholder="Male / Female">
+        </div>
+
+        <div class="input-group">
+            <label for="Age">Age :</label>
+            <input type="number" id="Age" name="Age" placeholder="e.g. 25" required>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit"> (Send)</button>
+            <button type="reset"> (Reset)</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
